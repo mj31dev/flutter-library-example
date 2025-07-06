@@ -1,21 +1,27 @@
 PODS:
+  - event_channel_example (0.0.1):
+    - Flutter
   - Flutter (1.0.0)
   - method_channel_example (0.0.1):
     - Flutter
 
 DEPENDENCIES:
+  - event_channel_example (from `.symlinks/plugins/event_channel_example/ios`)
   - Flutter (from `Flutter`)
   - method_channel_example (from `.symlinks/plugins/method_channel_example/ios`)
 
 EXTERNAL SOURCES:
+  event_channel_example:
+    :path: ".symlinks/plugins/event_channel_example/ios"
   Flutter:
     :path: Flutter
   method_channel_example:
     :path: ".symlinks/plugins/method_channel_example/ios"
 
 SPEC CHECKSUMS:
+  event_channel_example: 491f65847d3aee15b8c1a0811e06278f4ba2984c
   Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
-  method_channel_example: 37319328ad565415f70b7704e7acf2f80263b9ae
+  method_channel_example: b20f661daa15dc3f3c07b6069fe323a99ce1a59a
 
 PODFILE CHECKSUM: 4305caec6b40dde0ae97be1573c53de1882a07e5
 
