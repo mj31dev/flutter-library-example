@@ -1,13 +1,13 @@
 #
 # To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html.
-# Run `pod lib lint method_channel_example.podspec` to validate before publishing.
+# Run `pod lib lint basic_message_channel_example.podspec` to validate before publishing.
 #
 Pod::Spec.new do |s|
-  s.name             = 'method_channel_example'
+  s.name             = 'basic_message_channel_example'
   s.version          = '0.0.1'
-  s.summary          = 'Method channel example'
+  s.summary          = 'Basic message channel example'
   s.description      = <<-DESC
-Method channel example
+Basic message channel example
                        DESC
   s.homepage         = 'http://example.com'
   s.license          = { :file => '../LICENSE' }
@@ -25,5 +25,5 @@ Method channel example
   # required reason APIs, update the PrivacyInfo.xcprivacy file to describe your
   # plugin's privacy impact, and then uncomment this line. For more information,
   # see https://developer.apple.com/documentation/bundleresources/privacy_manifest_files
-  # s.resource_bundles = {'method_channel_example_privacy' => ['Resources/PrivacyInfo.xcprivacy']}
+  # s.resource_bundles = {'basic_message_channel_example_privacy' => ['Resources/PrivacyInfo.xcprivacy']}
 end

@@ -40,6 +40,9 @@ dependencies:
   event_channel_example:
     path: packages/event_channel_example
 
+  basic_message_channel_example:
+    path: packages/basic_message_channel_example
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

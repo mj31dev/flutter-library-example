@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:library_example/app_button.dart';
+import 'package:library_example/basic_message_channel_page.dart';
 import 'package:library_example/event_channel_page.dart';
 import 'package:library_example/method_channel_page.dart';
 
@@ -50,6 +51,11 @@ class MyHomePage extends StatelessWidget {
                 context: context,
                 screen: () => EventChannelPage(),
                 title: 'Event channel example',
+              ),
+              _button(
+                context: context,
+                screen: () => BasicMessageChannelPage(),
+                title: 'Basic message channel example',
               ),
             ],
           ),

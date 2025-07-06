@@ -1,4 +1,6 @@
 PODS:
+  - basic_message_channel_example (0.0.1):
+    - Flutter
   - event_channel_example (0.0.1):
     - Flutter
   - Flutter (1.0.0)
@@ -6,11 +8,14 @@ PODS:
     - Flutter
 
 DEPENDENCIES:
+  - basic_message_channel_example (from `.symlinks/plugins/basic_message_channel_example/ios`)
   - event_channel_example (from `.symlinks/plugins/event_channel_example/ios`)
   - Flutter (from `Flutter`)
   - method_channel_example (from `.symlinks/plugins/method_channel_example/ios`)
 
 EXTERNAL SOURCES:
+  basic_message_channel_example:
+    :path: ".symlinks/plugins/basic_message_channel_example/ios"
   event_channel_example:
     :path: ".symlinks/plugins/event_channel_example/ios"
   Flutter:
@@ -19,10 +24,11 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/method_channel_example/ios"
 
 SPEC CHECKSUMS:
-  event_channel_example: 491f65847d3aee15b8c1a0811e06278f4ba2984c
+  basic_message_channel_example: ebcbc202ca2aa23c7c9520d2f2dd0976e367f4e5
+  event_channel_example: 5db56824485e9e18c3709422ec97d8d8ff0316d7
   Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
-  method_channel_example: b20f661daa15dc3f3c07b6069fe323a99ce1a59a
+  method_channel_example: 2359ebb64c55168effde902eaca69ee767122ab6
 
-PODFILE CHECKSUM: 4305caec6b40dde0ae97be1573c53de1882a07e5
+PODFILE CHECKSUM: 3c63482e143d1b91d2d2560aee9fb04ecc74ac7e
 
 COCOAPODS: 1.16.2

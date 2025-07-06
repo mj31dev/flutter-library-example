@@ -9,6 +9,7 @@ public class EventChannelExamplePlugin: NSObject, FlutterPlugin, FlutterStreamHa
         let channel = FlutterEventChannel(name: "event_channel_example", binaryMessenger: registrar.messenger())
         let instance = EventChannelExamplePlugin()
         channel.setStreamHandler(instance)
+        registrar.publish(instance)
     }
     
     public func onListen(withArguments arguments: Any?, eventSink events: @escaping FlutterEventSink) -> FlutterError? {
