@@ -1,0 +1,22 @@
+PODS:
+  - Flutter (1.0.0)
+  - method_channel_example (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - method_channel_example (from `.symlinks/plugins/method_channel_example/ios`)
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  method_channel_example:
+    :path: ".symlinks/plugins/method_channel_example/ios"
+
+SPEC CHECKSUMS:
+  Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
+  method_channel_example: 37319328ad565415f70b7704e7acf2f80263b9ae
+
+PODFILE CHECKSUM: 4305caec6b40dde0ae97be1573c53de1882a07e5
+
+COCOAPODS: 1.16.2
