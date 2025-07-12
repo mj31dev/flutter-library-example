@@ -6,12 +6,15 @@ PODS:
   - Flutter (1.0.0)
   - method_channel_example (0.0.1):
     - Flutter
+  - pigeon_example (0.0.1):
+    - Flutter
 
 DEPENDENCIES:
   - basic_message_channel_example (from `.symlinks/plugins/basic_message_channel_example/ios`)
   - event_channel_example (from `.symlinks/plugins/event_channel_example/ios`)
   - Flutter (from `Flutter`)
   - method_channel_example (from `.symlinks/plugins/method_channel_example/ios`)
+  - pigeon_example (from `.symlinks/plugins/pigeon_example/ios`)
 
 EXTERNAL SOURCES:
   basic_message_channel_example:
@@ -22,12 +25,15 @@ EXTERNAL SOURCES:
     :path: Flutter
   method_channel_example:
     :path: ".symlinks/plugins/method_channel_example/ios"
+  pigeon_example:
+    :path: ".symlinks/plugins/pigeon_example/ios"
 
 SPEC CHECKSUMS:
   basic_message_channel_example: ebcbc202ca2aa23c7c9520d2f2dd0976e367f4e5
   event_channel_example: 5db56824485e9e18c3709422ec97d8d8ff0316d7
   Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
   method_channel_example: 2359ebb64c55168effde902eaca69ee767122ab6
+  pigeon_example: 3e82668e6ce62a385bfbbab26c19314e525db7b9
 
 PODFILE CHECKSUM: 3c63482e143d1b91d2d2560aee9fb04ecc74ac7e
 

@@ -3,6 +3,7 @@ import 'package:library_example/app_button.dart';
 import 'package:library_example/basic_message_channel_page.dart';
 import 'package:library_example/event_channel_page.dart';
 import 'package:library_example/method_channel_page.dart';
+import 'package:library_example/pigeon_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -56,6 +57,11 @@ class MyHomePage extends StatelessWidget {
                 context: context,
                 screen: () => BasicMessageChannelPage(),
                 title: 'Basic message channel example',
+              ),
+              _button(
+                context: context,
+                screen: () => PigeonPage(),
+                title: 'Pigeon example',
               ),
             ],
           ),

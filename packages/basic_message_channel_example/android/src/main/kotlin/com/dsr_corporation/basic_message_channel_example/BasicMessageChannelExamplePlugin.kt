@@ -1,4 +1,4 @@
-package com.example.basic_message_channel_example
+package com.dsr_corporation.basic_message_channel_example
 
 import android.content.Context
 import android.content.res.Configuration

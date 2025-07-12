@@ -43,6 +43,9 @@ dependencies:
   basic_message_channel_example:
     path: packages/basic_message_channel_example
 
+  pigeon_example:
+    path: packages/pigeon_example
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
