@@ -39,7 +39,7 @@ class _BasicMessageChannelPageState extends State<BasicMessageChannelPage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text('Event channel example'),
+        title: Text('Basic message channel example'),
       ),
       body: Center(
         child: Column(

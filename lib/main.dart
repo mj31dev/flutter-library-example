@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:library_example/app_button.dart';
 import 'package:library_example/basic_message_channel_page.dart';
 import 'package:library_example/event_channel_page.dart';
+import 'package:library_example/federated_plugin_page.dart';
 import 'package:library_example/method_channel_page.dart';
 import 'package:library_example/pigeon_page.dart';
 import 'package:library_example/run_engine_page.dart';
@@ -68,6 +69,11 @@ class MyHomePage extends StatelessWidget {
                 context: context,
                 screen: () => RunEnginePage(),
                 title: 'Run engine example',
+              ),
+              _button(
+                context: context,
+                screen: () => FederatedPluginPage(),
+                title: 'Federated plugin example',
               ),
             ],
           ),

@@ -71,6 +71,34 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.3.3"
+  federated_plugin:
+    dependency: "direct main"
+    description:
+      path: "packages/federated_plugin/federated_plugin"
+      relative: true
+    source: path
+    version: "0.0.1"
+  federated_plugin_android:
+    dependency: transitive
+    description:
+      path: "packages/federated_plugin/federated_plugin_android"
+      relative: true
+    source: path
+    version: "0.0.1"
+  federated_plugin_ios:
+    dependency: transitive
+    description:
+      path: "packages/federated_plugin/federated_plugin_ios"
+      relative: true
+    source: path
+    version: "0.0.1"
+  federated_plugin_platform_interface:
+    dependency: transitive
+    description:
+      path: "packages/federated_plugin/federated_plugin_platform_interface"
+      relative: true
+    source: path
+    version: "0.0.1"
   flutter:
     dependency: "direct main"
     description: flutter

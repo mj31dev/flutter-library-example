@@ -49,6 +49,9 @@ dependencies:
   run_engine_example:
     path: packages/run_engine_example
 
+  federated_plugin:
+    path: packages/federated_plugin/federated_plugin
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

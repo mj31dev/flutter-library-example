@@ -39,7 +39,7 @@ class _PigeonPageState extends State<PigeonPage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text('Method channel example'),
+        title: Text('Pigeon example'),
       ),
       body: Center(
         child: Column(

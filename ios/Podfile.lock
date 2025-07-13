@@ -3,6 +3,8 @@ PODS:
     - Flutter
   - event_channel_example (0.0.1):
     - Flutter
+  - federated_plugin_ios (0.0.1):
+    - Flutter
   - Flutter (1.0.0)
   - method_channel_example (0.0.1):
     - Flutter
@@ -14,6 +16,7 @@ PODS:
 DEPENDENCIES:
   - basic_message_channel_example (from `.symlinks/plugins/basic_message_channel_example/ios`)
   - event_channel_example (from `.symlinks/plugins/event_channel_example/ios`)
+  - federated_plugin_ios (from `.symlinks/plugins/federated_plugin_ios/ios`)
   - Flutter (from `Flutter`)
   - method_channel_example (from `.symlinks/plugins/method_channel_example/ios`)
   - pigeon_example (from `.symlinks/plugins/pigeon_example/ios`)
@@ -24,6 +27,8 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/basic_message_channel_example/ios"
   event_channel_example:
     :path: ".symlinks/plugins/event_channel_example/ios"
+  federated_plugin_ios:
+    :path: ".symlinks/plugins/federated_plugin_ios/ios"
   Flutter:
     :path: Flutter
   method_channel_example:
@@ -36,6 +41,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   basic_message_channel_example: ebcbc202ca2aa23c7c9520d2f2dd0976e367f4e5
   event_channel_example: 5db56824485e9e18c3709422ec97d8d8ff0316d7
+  federated_plugin_ios: 9961fe952c295adb2cb87c95aa67c593819c235f
   Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
   method_channel_example: 2359ebb64c55168effde902eaca69ee767122ab6
   pigeon_example: 3e82668e6ce62a385bfbbab26c19314e525db7b9

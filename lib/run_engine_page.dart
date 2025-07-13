@@ -39,7 +39,7 @@ class _RunEnginePageState extends State<RunEnginePage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text('Method channel example'),
+        title: Text('Run engine example'),
       ),
       body: Center(
         child: Column(
