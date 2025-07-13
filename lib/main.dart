@@ -76,10 +76,6 @@ class MyHomePage extends StatelessWidget {
                 screen: () => FederatedPluginPage(),
                 title: 'Federated plugin example',
               ),
-              AppButton(
-                onPressed: TestModel().sayHello,
-                title: 'Test shared codegen',
-              ),
             ],
           ),
         ),

@@ -1,5 +1,5 @@
-name: shared_builder_example
-description: "Shared codegen builder example"
+name: part_builder_example
+description: "Builder example"
 version: 0.0.1
 homepage:
 

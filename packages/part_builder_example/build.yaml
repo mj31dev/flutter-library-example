@@ -1,0 +1,14 @@
+targets:
+  $default:
+    builders:
+      shared_part_builder_example|copy_with:
+        generate_for:
+          - lib/**/*.dart
+
+builders:
+  copy_with:
+    import: "package:part_builder_example/src/builder.dart"
+    builder_factories: ["copyWithBuilder"]
+    build_extensions: {".dart": [".copy.with.dart"]}
+    auto_apply: dependents
+    build_to: source

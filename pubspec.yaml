@@ -52,8 +52,11 @@ dependencies:
   federated_plugin:
     path: packages/federated_plugin/federated_plugin
 
-  shared_builder_example:
-    path: packages/shared_builder_example
+  shared_part_builder_example:
+    path: packages/shared_part_builder_example
+
+  part_builder_example:
+    path: packages/part_builder_example
 
 dev_dependencies:
   flutter_test:

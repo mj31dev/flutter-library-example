@@ -420,6 +420,13 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.2.0"
+  part_builder_example:
+    dependency: "direct main"
+    description:
+      path: "packages/part_builder_example"
+      relative: true
+    source: path
+    version: "0.0.1"
   path:
     dependency: transitive
     description:
@@ -474,10 +481,10 @@ packages:
       relative: true
     source: path
     version: "0.0.1"
-  shared_builder_example:
+  shared_part_builder_example:
     dependency: "direct main"
     description:
-      path: "packages/shared_builder_example"
+      path: "packages/shared_part_builder_example"
       relative: true
     source: path
     version: "0.0.1"

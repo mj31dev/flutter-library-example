@@ -1,5 +1,5 @@
 import 'package:build/build.dart';
-import 'package:shared_builder_example/src/annotation.dart';
+import 'annotation.dart';
 import 'package:source_gen/source_gen.dart';
 import 'package:analyzer/dart/element/element.dart';
 
