@@ -46,6 +46,9 @@ dependencies:
   pigeon_example:
     path: packages/pigeon_example
 
+  run_engine_example:
+    path: packages/run_engine_example
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

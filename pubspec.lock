@@ -175,6 +175,13 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.8"
+  run_engine_example:
+    dependency: "direct main"
+    description:
+      path: "packages/run_engine_example"
+      relative: true
+    source: path
+    version: "0.0.1"
   sky_engine:
     dependency: transitive
     description: flutter
