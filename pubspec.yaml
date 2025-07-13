@@ -58,6 +58,9 @@ dependencies:
   part_builder_example:
     path: packages/part_builder_example
 
+  library_builder_example:
+    path: packages/library_builder_example
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

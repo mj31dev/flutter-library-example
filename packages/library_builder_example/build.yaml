@@ -1,0 +1,14 @@
+targets:
+  $default:
+    builders:
+      library_builder_example|to_string:
+        generate_for:
+          - lib/**/*.dart
+
+builders:
+  to_string:
+    import: "package:library_builder_example/src/builder.dart"
+    builder_factories: ["toStringBuilder"]
+    build_extensions: {".dart": [".to.string.dart"]}
+    auto_apply: dependents
+    build_to: source
