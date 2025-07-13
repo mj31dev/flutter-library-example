@@ -6,6 +6,7 @@ import 'package:library_example/federated_plugin_page.dart';
 import 'package:library_example/method_channel_page.dart';
 import 'package:library_example/pigeon_page.dart';
 import 'package:library_example/run_engine_page.dart';
+import 'package:library_example/test_model.dart';
 
 void main() {
   runApp(const MyApp());
@@ -74,6 +75,10 @@ class MyHomePage extends StatelessWidget {
                 context: context,
                 screen: () => FederatedPluginPage(),
                 title: 'Federated plugin example',
+              ),
+              AppButton(
+                onPressed: TestModel().sayHello,
+                title: 'Test shared codegen',
               ),
             ],
           ),

@@ -1,0 +1,15 @@
+targets:
+  $default:
+    builders:
+      shared_builder_example|auto_hello:
+        generate_for:
+          - lib/**/*.dart
+
+builders:
+  auto_hello:
+    import: "package:shared_builder_example/src/builder.dart"
+    builder_factories: ["autoHelloBuilder"]
+    build_extensions: {".dart": [".g.part"]}
+    auto_apply: dependents
+    build_to: cache
+    applies_builders: ["source_gen|combining_builder"]

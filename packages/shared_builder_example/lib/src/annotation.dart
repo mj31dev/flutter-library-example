@@ -1,0 +1,3 @@
+class AutoHello {
+  const AutoHello();
+}
