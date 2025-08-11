@@ -12,6 +12,7 @@ import io.flutter.plugin.common.MethodChannel.Result
 class PigeonExamplePlugin : FlutterPlugin {
     override fun onAttachedToEngine(flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
         val messenger = flutterPluginBinding.binaryMessenger
+        // Setup platform interface implementation
         PlatformInfoApi.setUp(messenger, DefaultPlatformInfoApi(VersionFlutterApi(messenger)))
     }
 

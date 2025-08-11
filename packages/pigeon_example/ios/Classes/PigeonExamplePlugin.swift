@@ -4,11 +4,12 @@ import UIKit
 public class PigeonExamplePlugin: NSObject, FlutterPlugin {
     
     public static func register(with registrar: FlutterPluginRegistrar) {
-        let messanger = registrar.messenger()
+        let messenger = registrar.messenger()
+        // Setup platform interface implementation
         PlatformInfoApiSetup.setUp(
-            binaryMessenger: messanger,
+            binaryMessenger: messenger,
             api: DefaultPlatformInfoApi(
-                api: VersionFlutterApi(binaryMessenger: messanger)
+                api: VersionFlutterApi(binaryMessenger: messenger)
             )
         )
     }

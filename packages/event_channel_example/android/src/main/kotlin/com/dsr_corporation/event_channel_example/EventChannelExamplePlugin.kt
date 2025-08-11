@@ -19,14 +19,17 @@ class EventChannelExamplePlugin: FlutterPlugin {
 
   override fun onAttachedToEngine(flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
     context = flutterPluginBinding.applicationContext
+    // Setup event channel to send values to flutter part
     eventChannel = EventChannel(flutterPluginBinding.flutterEngine.dartExecutor.binaryMessenger, "event_channel_example")
     eventChannel?.setStreamHandler(
       object : EventChannel.StreamHandler {
+        // Start listening for battery level changes when flutter part start listening to the event channel
         override fun onListen(arguments: Any?, events: EventChannel.EventSink?) {
           batteryReceiver = createBatteryReceiver(events)
           context?.registerReceiver(batteryReceiver, IntentFilter(Intent.ACTION_BATTERY_CHANGED))
         }
 
+        // Stop listening for battery level changes when flutter part stop listening to the event channel
         override fun onCancel(arguments: Any?) {
           context?.unregisterReceiver(batteryReceiver)
           batteryReceiver = null
@@ -43,8 +46,10 @@ class EventChannelExamplePlugin: FlutterPlugin {
     context = null
   }
 
+  // Create battery level changes receiver
   private fun createBatteryReceiver(events: EventChannel.EventSink?): BroadcastReceiver {
     return object : BroadcastReceiver() {
+      // Receive battery level changes
       override fun onReceive(context: Context?, intent: Intent?) {
         val level = intent?.getIntExtra(BatteryManager.EXTRA_LEVEL, -1) ?: -1
         val scale = intent?.getIntExtra(BatteryManager.EXTRA_SCALE, -1) ?: -1

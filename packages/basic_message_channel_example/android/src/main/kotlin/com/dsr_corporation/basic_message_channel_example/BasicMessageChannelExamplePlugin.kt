@@ -19,6 +19,7 @@ class BasicMessageChannelExamplePlugin : FlutterPlugin {
 
     override fun onAttachedToEngine(flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
         context = flutterPluginBinding.applicationContext
+        // Setup basic message channel to communicate with flutter part
         channel = BasicMessageChannel(
             flutterPluginBinding.binaryMessenger,
             "basic_message_channel_example",
@@ -33,6 +34,7 @@ class BasicMessageChannelExamplePlugin : FlutterPlugin {
         context = null
     }
 
+    // Setup a handler for messages from the flutter part
     private fun setupChannel() {
         channel.setMessageHandler { message, reply ->
             if (message == "get_orientation") {
@@ -43,6 +45,7 @@ class BasicMessageChannelExamplePlugin : FlutterPlugin {
         }
     }
 
+    // Get current orientation
     private fun currentOrientation(): String {
         val orientation = context?.resources?.configuration?.orientation
         return when (orientation) {
@@ -52,6 +55,7 @@ class BasicMessageChannelExamplePlugin : FlutterPlugin {
         }
     }
 
+    // Listen for orientation change
     private fun startOrientationObserver() {
         orientationEventListener = object : OrientationEventListener(context) {
             override fun onOrientationChanged(orientation: Int) {

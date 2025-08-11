@@ -30,11 +30,12 @@ class RunEngineExamplePlugin : FlutterPlugin, MethodCallHandler {
     }
 
     override fun onMethodCall(call: MethodCall, result: Result) {
-        if (call.method == "run") {
+        if (call.method == "run") { // Run second engine
             val context = this.context ?: run {
                 result.notImplemented()
                 return
             }
+            // Get entry point information
             val args = call.arguments as? Map<*, *>
             val rawHandle = (args?.get("function") as? Long) ?: run {
                 result.notImplemented()
@@ -48,11 +49,13 @@ class RunEngineExamplePlugin : FlutterPlugin, MethodCallHandler {
 
             val dartArgs = args["args"] as? List<String>
 
+            // Create new engine
             val flutterEngine = FlutterEngine(context.applicationContext)
             this.flutterEngine = flutterEngine
             if (!flutterLoader.initialized()) {
                 flutterLoader.startInitialization(context)
             }
+            // Setup entry point
             flutterLoader.ensureInitializationCompleteAsync(
                 /* applicationContext = */ context,
                 /* args = */ null,
@@ -63,7 +66,7 @@ class RunEngineExamplePlugin : FlutterPlugin, MethodCallHandler {
             )
 
             result.success(true)
-        } else {
+        } else { // Incorrect method
             result.notImplemented()
         }
     }
@@ -73,6 +76,7 @@ class RunEngineExamplePlugin : FlutterPlugin, MethodCallHandler {
         args: List<String>?,
         callbackInfo: FlutterCallbackInformation,
     ) {
+        // Run second engine
         val dartBundlePath = flutterLoader.findAppBundlePath()
         engine.dartExecutor.executeDartEntrypoint(
             DartExecutor.DartEntrypoint(
@@ -83,6 +87,7 @@ class RunEngineExamplePlugin : FlutterPlugin, MethodCallHandler {
             args
         )
 
+        // Setup method channel for second engine
         backgroundChannel =
             MethodChannel(engine.dartExecutor.binaryMessenger, "run_engine_example_second_channel")
         backgroundChannel?.setMethodCallHandler { call, result ->
@@ -95,6 +100,7 @@ class RunEngineExamplePlugin : FlutterPlugin, MethodCallHandler {
         }
     }
 
+    // Stop second engine
     private fun stop() {
         flutterEngine?.destroy()
         flutterEngine = null

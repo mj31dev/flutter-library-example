@@ -9,19 +9,19 @@ import android.content.Context
 import android.os.Build
 import java.util.Locale
 
-/** FederatedPluginAndroidPlugin */
 class FederatedPluginAndroidPlugin: FlutterPlugin, MethodCallHandler {
   private lateinit var channel : MethodChannel
   private var context: Context? = null
 
   override fun onAttachedToEngine(flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
     context = flutterPluginBinding.applicationContext
+    // Setup method channel to communicate with flutter part
     channel = MethodChannel(flutterPluginBinding.binaryMessenger, "federated_plugin_android")
     channel.setMethodCallHandler(this)
   }
 
   override fun onMethodCall(call: MethodCall, result: Result) {
-    if (call.method == "getLocale") {
+    if (call.method == "getLocale") { // Get locale from native part
       val context = context ?: run {
         result.notImplemented()
         return
@@ -32,7 +32,7 @@ class FederatedPluginAndroidPlugin: FlutterPlugin, MethodCallHandler {
         context.resources.configuration.locale
       }
       result.success(locale.toLanguageTag())
-    } else {
+    } else { // Incorrect method
       result.notImplemented()
     }
   }

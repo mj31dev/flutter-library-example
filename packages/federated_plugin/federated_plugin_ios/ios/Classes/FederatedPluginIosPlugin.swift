@@ -3,6 +3,7 @@ import UIKit
 
 public class FederatedPluginIosPlugin: NSObject, FlutterPlugin {
   public static func register(with registrar: FlutterPluginRegistrar) {
+    // Setup method channel to communicate with flutter part
     let channel = FlutterMethodChannel(name: "federated_plugin_ios", binaryMessenger: registrar.messenger())
     let instance = FederatedPluginIosPlugin()
     registrar.addMethodCallDelegate(instance, channel: channel)
@@ -10,9 +11,9 @@ public class FederatedPluginIosPlugin: NSObject, FlutterPlugin {
 
   public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
     switch call.method {
-    case "get_locale":
+    case "get_locale": // Get locale from native part
       result(Locale.current.identifier)
-    default:
+    default: // Incorrect method
       result(FlutterMethodNotImplemented)
     }
   }

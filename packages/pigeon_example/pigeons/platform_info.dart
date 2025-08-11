@@ -1,5 +1,6 @@
 import 'package:pigeon/pigeon.dart';
 
+// Pigeon configuration
 @ConfigurePigeon(
   PigeonOptions(
     dartOut: 'lib/platform.g.dart',
@@ -12,6 +13,7 @@ import 'package:pigeon/pigeon.dart';
     dartPackageName: 'pigeon_example',
   ),
 )
+// Model configuration
 class PlatformInfo {
   PlatformInfo({
     required this.name,
@@ -25,12 +27,14 @@ class PlatformInfo {
 }
 
 @HostApi()
+// Native interface configuration
 abstract class PlatformInfoApi {
   @async
   PlatformInfo getPlatformInfo();
 }
 
 @FlutterApi()
+// Flutter interface configuration
 abstract class VersionFlutterApi {
   String getAppVersion();
 }

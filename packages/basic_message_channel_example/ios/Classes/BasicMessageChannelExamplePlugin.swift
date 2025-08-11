@@ -6,6 +6,7 @@ public class BasicMessageChannelExamplePlugin: NSObject, FlutterPlugin {
     private let channel: FlutterBasicMessageChannel
     
     public static func register(with registrar: FlutterPluginRegistrar) {
+        // Setup basic message channel to communicate with flutter part
         let channel = FlutterBasicMessageChannel(
             name: "basic_message_channel_example",
             binaryMessenger: registrar.messenger(),
@@ -21,6 +22,7 @@ public class BasicMessageChannelExamplePlugin: NSObject, FlutterPlugin {
         self.channel = channel
     }
     
+    // Setup a handler for messages from the flutter part
     private func setupChannel() {
         channel.setMessageHandler {  [weak self] message, reply in
             if message as? String == "get_orientation" {
@@ -30,7 +32,8 @@ public class BasicMessageChannelExamplePlugin: NSObject, FlutterPlugin {
             }
         }
     }
-    
+
+    // Get current orientation
     private func currentOrientation() -> String {
         let orientation = UIApplication.shared.windows.first?.windowScene?.interfaceOrientation
         switch orientation {
@@ -42,7 +45,8 @@ public class BasicMessageChannelExamplePlugin: NSObject, FlutterPlugin {
             return "Undefined"
         }
     }
-    
+
+    // Listen for orientation change
     private func startOrientationObserver() {
         NotificationCenter.default.addObserver(
             self,
@@ -52,9 +56,11 @@ public class BasicMessageChannelExamplePlugin: NSObject, FlutterPlugin {
         )
         UIDevice.current.beginGeneratingDeviceOrientationNotifications()
     }
-    
+
+    // Receive orientation change notification
     @objc private func orientationChanged() {
         let info = currentOrientation()
+        // Send message to flutter part
         channel.sendMessage(String(format: "orientation_update:%@", info))
     }
 }

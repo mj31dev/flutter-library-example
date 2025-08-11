@@ -4,8 +4,15 @@ import PlatformInfo
 import PlatformInfoApi
 import VersionFlutterApi
 
-class DefaultPlatformInfoApi(private val api: VersionFlutterApi) : PlatformInfoApi {
+// Android implementation for platform interface
+class DefaultPlatformInfoApi(
+    // Flutter interface
+    private val api: VersionFlutterApi
+) : PlatformInfoApi {
+
+    // Get platform information
     override fun getPlatformInfo(callback: (Result<PlatformInfo>) -> Unit) {
+        // Call flutter api to get app version
         api.getAppVersion { version ->
             version.onSuccess {
                 callback(

@@ -11,14 +11,15 @@ class MethodChannelExamplePlugin: FlutterPlugin, MethodCallHandler {
   private lateinit var channel : MethodChannel
 
   override fun onAttachedToEngine(flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
+    // Setup method channel to communicate with flutter part
     channel = MethodChannel(flutterPluginBinding.binaryMessenger, "method_channel_example")
     channel.setMethodCallHandler(this)
   }
 
   override fun onMethodCall(call: MethodCall, result: Result) {
-    if (call.method == "getPlatformVersion") {
+    if (call.method == "getPlatformVersion") {  // Get Android version
       result.success("Android ${android.os.Build.VERSION.RELEASE}")
-    } else {
+    } else { // Incorrect method
       result.notImplemented()
     }
   }
